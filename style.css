@@ -1,0 +1,122 @@
+/* Estilo do tabuleiro */
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,700,900');
+
+*{
+    font-family: 'poppins-bold', sans-serif !important;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 100px); /* Defina o tamanho das colunas */
+    grid-gap: 10px; /* Espaço entre os quadrados */
+    width: 430px; /* Largura total do tabuleiro */
+    margin: 0 auto; /* Centralizar o tabuleiro */
+    background-color: #bbada0; /* Cor de fundo do tabuleiro */
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.grid div {
+    width: 100px; /* Largura de cada quadrado */
+    height: 100px; /* Altura de cada quadrado */
+    background-color: #ccc0b3; /* Cor de fundo dos quadrados vazios */
+    font-size: 24px; /* Tamanho da fonte dentro dos quadrados */
+    text-align: center; /* Centralizar texto verticalmente */
+    line-height: 100px; /* Centralizar texto horizontalmente */
+    border-radius: 5px;
+}
+
+/* Estilos para números diferentes */
+/* Adicione cores diferentes para cada número possível */
+.grid div[data-number="2"] {
+    background-color: #eee4da;
+    color: #776e65;
+}
+
+.grid div[data-number="4"] {
+    background-color: #ede0c8;
+    color: #776e65;
+}
+
+.grid div[data-number="8"] {
+    background-color: #f2b179;
+    color: #ffffff;
+}
+
+/* Adicione mais cores para números maiores, se desejar */
+
+/* Estilo para números maiores que 8 */
+.grid div[data-number="16"],
+.grid div[data-number="32"],
+.grid div[data-number="64"],
+.grid div[data-number="128"],
+.grid div[data-number="256"],
+.grid div[data-number="512"],
+.grid div[data-number="1024"],
+.grid div[data-number="2048"] {
+    background-color: #f67c5f;
+    color: #ffffff;
+}
+
+/* Estilo para números maiores que 2048, se desejar */
+
+/* Estilo para o placar */
+#score {
+    font-size: 36px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#result {
+    font-size: 48px;
+    text-align: center;
+    margin-top: 20px;
+    color: #f67c5f; /* Cor do texto de vitória/derrota */
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.header {
+    width: 450px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0px;
+    margin: 0px;
+    align-items: center;
+}
+h1 {
+    font-size: 60px;
+    margin: 0px;
+    margin-top: 30px;
+    color:#776e65;
+}
+.texto-header {
+    font-size: 15px;
+    margin: 0px;
+    margin-top: 5px;
+}
+
+.score-title {
+    display: flex;
+}
+
+.title-score {
+    margin: 0px;
+}
+
+.score-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(130,112,92);
+    width: 100px;
+    height: 90px;
+    color: #ffffff;
+    border-radius: 10px;
+}
